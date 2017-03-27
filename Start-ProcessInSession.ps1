@@ -47,7 +47,7 @@ namespace APClientHxHelpPane {
 }
 "@
 	if (!([System.Management.Automation.PSTypeName]'APClientHxHelpPane.Server').Type) {
-    	add-type $APClientHxHelpPaneServerClass
+		add-type $APClientHxHelpPaneServerClass
 	}
 	
 	$Process = [System.Diagnostics.Process]::GetCurrentProcess()
@@ -55,5 +55,5 @@ namespace APClientHxHelpPane {
 		Write-Warning 'SessionID is the id of the current session'
 	}
 	
-    [APClientHxHelpPane.Server]::execute($SessionID,$Path)
+	[APClientHxHelpPane.Server]::execute($SessionID,$Path)
 }
